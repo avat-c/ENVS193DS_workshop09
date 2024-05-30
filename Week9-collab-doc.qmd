@@ -22,7 +22,7 @@ data(pie_crab) # read in data set
 I will visualize the data
 
 ```{r}
-ggplot(aes( x = latitude, 
+ggplot(aes(x = latitude, 
        y = size,
        data = pie_crab)) + # create the plot
   geom_point(color = "#aa76bc") + # the points are a purplish color lavender maybe?
@@ -31,3 +31,12 @@ ggplot(aes( x = latitude,
   theme_minimal() # theme have no grid
 ```
 
+Writing a model:
+
+```{r}
+crab_model <- lm(size ~ latitude, # formula : response ~ predictor 
+                 data = pie_crab) # data frame 
+par(mfrow = c(2,2))
+plot(crab_model)
+
+```
