@@ -23,8 +23,8 @@ I will visualize the data
 
 ```{r}
 ggplot(aes(x = latitude, 
-       y = size,
-       data = pie_crab)) + # create the plot
+       y = size),
+       data = pie_crab) + # create the plot
   geom_point(color = "#aa76bc") + # the points are a purplish color lavender maybe?
   labs( x = "Latitude",
         y = "Size") + # updat axis labels
@@ -40,3 +40,17 @@ par(mfrow = c(2,2))
 plot(crab_model)
 
 ```
+Run the model and interpret
+
+```{r}
+summary(crab_model) # look at model output
+```
+Summarize our results:
+
+slope: 0.49
+y-int: -3.6 ± 1.27
+For eveyr 1 degree increase in latutude we expect to see a 0.49mm increase in crab size (±0.034 mm)
+
+Mdoel Stats: F(1, 390) = 208.5, p < 0.001, $\alpha = 0.05$ $R^2 = 0.35$
+
+Model Diagnostic plot notes:
