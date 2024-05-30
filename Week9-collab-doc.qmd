@@ -3,10 +3,18 @@ title: "Week9-collab-doc"
 format: html
 editor: visual
 ---
+
 Load Libraries
+
 ```{r}
 library(tidyverse) #for data wrangling
 library(ggeffects) # for model viz
 library(lterdatasampler) # for data
 library(here) # for easy file paths
+```
+
+Reading in data
+
+```{r}
+data(pie_crab) # read in data set 
 ```
