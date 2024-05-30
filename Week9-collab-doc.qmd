@@ -18,3 +18,16 @@ Reading in data
 ```{r}
 data(pie_crab) # read in data set 
 ```
+
+I will visualize the data
+
+```{r}
+ggplot(aes( x = latitude, 
+       y = size,
+       data = pie_crab)) + # create the plot
+  geom_point(color = "#aa76bc") + # the points are a purplish color lavender maybe?
+  labs( x = "Latitude",
+        y = "Size") + # updat axis labels
+  theme_minimal() # theme have no grid
+```
+
